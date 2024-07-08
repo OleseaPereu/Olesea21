@@ -1,0 +1,58 @@
+//	Homework 
+
+	WebDriverManager.chromedriver().setup();
+        ChromeDriver driver = new ChromeDriver();
+						
+					
+//id css 
+	driver.get("https://olx.ro");
+	Thread.sleep(2000);
+	driver.manage().window().maximize();
+	 driver.findElement(By.cssSelector("button#onetrust-accept-btn-handler")).click();
+					
+//tagName[AttributeName='AttributeValue']
+	driver.get("https://olx.ro");
+	Thread.sleep(2000);
+	driver.manage().window().maximize();
+	driver.findElement(By.cssSelector("div[class='css-bkyudi'")).click();
+						
+//tagName.elementClass
+	driver.get("https://olx.ro");
+	Thread.sleep(2000);
+	driver.manage().window().maximize();
+	driver.findElement(By.cssSelector("div.css-t0lbh8")).click();
+					 
+				
+						
+//tagname[AttributeName^='AttributeValue'] = X-path starts-with 
+	driver.get("https://olx.ro");
+	Thread.sleep(2000);
+	driver.manage().window().maximize();
+	driver.findElement(By.cssSelector("button[name^='searchBtn']")).click();
+				
+//tagname[AttributeName*='AttributeValue'] = X-path = Contains
+	driver.get("https://olx.ro");
+	Thread.sleep(2000);
+	driver.manage().window().maximize();
+	driver.findElement(By.cssSelector("button[name*='arch']")).click();
+								
+//tagName[AttributeName='AttributeValue'][ AttributeName='AttributeValue']
+	driver.get("https://olx.ro");
+	Thread.sleep(2000);
+	driver.manage().window().maximize();
+	driver.findElement(By.cssSelector("input[placeholder='Ce anume cauți?'][data-cy='search-bar-input']")).click();
+	 driver.findElement(By.cssSelector("input[placeholder='Ce anume cauți?'][data-cy='search-bar-input']")).sendKeys("telefon");
+				
+	//others
+	driver.get("https://olx.ro");
+	Thread.sleep(2000);
+        driver.manage().window().maximize();
+	driver.findElement(By.cssSelector("span[class='css-o7mc1q']")).click();
+	driver.findElement(By.cssSelector("a[data-cy='post-new-ad-button']")).click();
+	driver.findElement(By.cssSelector("input[data-cy='search-bar-input']")).click();
+	driver.findElement(By.cssSelector("input[placeholder='Toată țara']")).click();
+							
+								
+	}
+
+}
